@@ -32,13 +32,13 @@
             <div class="tab_type01">
                 <ul>
                     <li id="t1" class="selected">
-                        <a href="">위드유</a>
+                        <a href="javascript:ex1(1)">위드유</a>
                     </li>
                     <li id="t2">
-                        <a href="">위드유 영상</a>
+                        <a href="javascript:ex1(2)">위드유 영상</a>
                     </li>
                     <li id="t3">
-                        <a href="">위드유 행사</a>
+                        <a href="javascript:ex1(3)">위드유 행사</a>
                     </li>
                 </ul>
             </div>
@@ -112,12 +112,54 @@
         // 함수 정의 법: function이라는 단어를 사용함! function test(){}
         // 자바 스크립트에서는 변수를 선언할 때
         // 자료형을 지정하지 않는다. (값이 저장될 때 내부적으로 자료형이 지정됨)
-        let msg = "Message";
-        var su = 100;
 
-        function test(){
-            let ss = "AAAA";
-            console.log(msg + "/" + ss + "/" + su);
+        // let msg = "Message";
+        // var su = 100;
+
+        // function test(){
+        //     let ss = "AAAA";
+        //     console.log(msg + "/" + ss + "/" + su);
+        // }
+
+        function ex1(num){
+            // console.log('NUM: '+num);
+
+            // 먼저 현재문서(document)에서 아이디가 t1인 요소를
+            // 검색하여 변수 t1에게 저장한다.
+
+            let t1 = document.getElementById("t1");
+            let t2 = document.getElementById("t2"); 
+            let t3 = document.getElementById("t3");
+
+            let tab1 = document.getElementById("tab1");
+            let tab2 = document.getElementById("tab2"); 
+            let tab3 = document.getElementById("tab3");
+            
+            // t1에 지정된 class들을 모두 삭제하자
+            t1.className = "";
+            t2.className = "";
+            t3.className = "";
+            
+            tab1.className = "tab_cont";
+            tab2.className = "tab_cont";
+            tab3.className = "tab_cont";
+            
+            // 인자로 넘어온 num이 1이면 t1에게
+            // "selected"라는 클래스를 지정한다.
+            switch (num) {
+                case 1:
+                    t1.className = "selected";
+                    tab1.className = "tab_cont show";
+                    break;
+                case 2:
+                    t2.className = "selected";
+                    tab2.className = "tab_cont show";
+                    break;
+                case 3:
+                    t3.className = "selected";
+                    tab3.className = "tab_cont show";
+                    break;
+            }
         }
 
     </script>
