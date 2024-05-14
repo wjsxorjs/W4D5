@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+#contents{
+    width: 970px;
+    height: auto;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.sub_title{
+    background: url("../images/sub_title.png") no-repeat;
+    text-indent: -9999px;
+    
+}
+
+h1.tit02{ /*회원로그인 타이틀 이미지*/
+    width: 132px;
+    height: 30px;
+    background-position: 0 -50px;
+}
+
+h2.tit03{ /*개인회원 타이틀 이미지*/
+    width: 290px;
+    height: 75px;
+    background-position: 0 -80px;
+}
+
+h2.tit04{ /*단체회원 타이틀 이미지*/
+    width: 290px;
+    height: 75px;
+    background-position: 0 -155px;
+}
